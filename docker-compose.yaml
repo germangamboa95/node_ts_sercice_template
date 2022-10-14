@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  tinypost:
+  app:
     build: .
     platform: linux
     volumes:
@@ -10,15 +10,6 @@ services:
     ports:
       - 8000:3000
     networks:
-      - tinypost_network
-  tinypost_tests:
-    build: .
-    volumes:
-      - ./:/usr/app
-    command: "npm run test"
-    ports:
-      - 8000:3000
-    networks:
-      - tinypost_network
+      - app_network
 networks:
-  tinypost_network:
+  app_network:
