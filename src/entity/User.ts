@@ -6,9 +6,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
-  OneToMany,
 } from "typeorm";
-import { Post } from "./Post";
 
 @Entity()
 export class User {
@@ -21,9 +19,6 @@ export class User {
 
   @Column()
   password: string;
-
-  @OneToMany(() => Post, (post) => post.user)
-  posts: Post[];
 
   @CreateDateColumn()
   created_at: Date;

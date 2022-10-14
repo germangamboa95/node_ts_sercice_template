@@ -25,7 +25,7 @@ describe("HomeController Suite", () => {
 
     const container = render(text);
 
-    const title = getByText(container, "Tinypost");
-    expect(title.textContent).toBe("Tinypost");
+    const title = getByText(container, "The app");
+    expect(title.textContent).toBe("The app");
   });
 });
